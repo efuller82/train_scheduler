@@ -1,0 +1,21 @@
+.jumbotron {
+    background-image: url("../images/throwmomma.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    background-position: center center;
+}
+
+.card {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.form-group {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+#add-train-btn {
+    margin-left: 2%;
+}
