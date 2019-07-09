@@ -68,22 +68,30 @@
       // Calculate when the next arrival will be
       // Will have to use the time of the first train and the train frequency, as well as the current time
       // Prettify the next train arrival in military time
-      var nextArrival;
-      var nextArrivalPretty;
+      var convertedTime = moment(firstTrain, "HH:mm").subtract(1, "years");
+      console.log(convertedTime);
 
-      
+      var diffTime = moment().diff(moment(convertedTime), "minutes");  
+      console.log("Difference in time: " + diffTime);
+
+      var tRemainder = diffTime % trainFrequency;
+      console.log(tRemainder);
 
       // Calculate how many minutes away the next train is
       // Will have to use next arrival - current time
       var now = moment();
-      var minutesAway = nextArrival - now;
+      var minutesAway = trainFrequency - tRemainder;
+
+      // Next arrival
+      var nextArrival = moment().add(minutesAway, "minutes");
+      console.log("Arrival Time: " + moment(nextArrival).format("HH:mm"));
 
       // Create the new row
       var newRow = $("<tr>").append(
           $("<td>").text(trainName),
           $("<td>").text(trainDestination),
           $("<td>").text(trainFrequency),
-          $("<td>").text(nextArrival),
+          $("<td>").text(nextArrival.format("HH:mm")),
           $("<td>").text(minutesAway)
       );
 
