@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--my stylesheet-->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
+    
 </head>
 <body>
     <div class="container">
@@ -20,7 +24,7 @@
         </div>
         <div class="card">
             <h5 class="card-header">Current Train Schedule</h5>
-            <table class="table">
+            <table class="table" id="train-schedule-table">
                 <thead>
                     <tr>
                         <th scope="col">Train Name</th>
@@ -54,7 +58,7 @@
                     <label for="frequency">Frequency (min)</label>
                     <input type="text" class="form-control" id="frequency">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" id="add-train-btn">Submit</button>
             </form>
         </div>
     </div>
@@ -62,8 +66,6 @@
     
     </div>
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
 
     <!--jquery, popper, and bootstrap js files-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
