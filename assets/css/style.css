@@ -18,4 +18,14 @@
 
 #add-train-btn {
     margin-left: 2%;
+    margin-bottom: 2%;
 }
+
+body {
+    background-image: url("../images/train-track.jpg");
+}
+
+.card {
+    background: rgb(252, 252, 252, .7);
+}
+
